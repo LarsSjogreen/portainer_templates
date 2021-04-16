@@ -13,8 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Qballjos/portainer_templates.git"
+    "url": "git+https://github.com/larssjogreen/portainer_templates.git"
   },
-  "author": "Qballjos",
+  "author": "Lars Sjögreen, based on the template list made by Qballjos",
   "license": "GPLv3"
 }
