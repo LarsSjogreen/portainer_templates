@@ -193,37 +193,6 @@
 		},
 		{
 			"categories": [
-				"Other",
-				"Tools",
-				"Authentication"
-			],
-			"description": "An open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal.",
-			"env": [
-				{
-					"label": "TZ",
-					"name": "TZ"
-				}
-			],
-			"image": "authelia/authelia:latest",
-			"logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/authelia.png",
-			"name": "authelia",
-			"note": "Requires a configuration.yml file in order to work. Documentation is Available \u003ca href='https://docs.authelia.com/deployment/deployment-ha'\u003ehere\u003c/a\u003e.",
-			"platform": "linux",
-			"ports": [
-				"9091:9091/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Authelia",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/portainer/Files/AppData/Config/Authelia",
-					"container": "/etc/authelia/"
-				}
-			]
-		},
-		{
-			"categories": [
 				"Video",
 				"Music"
 			],
@@ -5076,102 +5045,6 @@
 		},
 		{
 			"type": 1,
-			"title": "Bazarr",
-			"name": "Bazarr",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/bazarr/config<br>mkdir -p /volume1/docker/bazarr/movies<br>mkdir -p /volume1/docker/bazarr/tv</p>",
-			"description": "Bazarr is a companion application to Sonarr and Radarr. It can manage and download subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.",
-			"platform": "linux",
-			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/bazarr.png",
-			"image": "linuxserver/bazarr:latest",
-			"env": [
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "1024",
-					"description": "for GroupID"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "100",
-					"description": "for UserID"
-				},
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Amsterdam",
-					"description": "Specify a timezone to use for example Europe/Amsterdam"
-				}
-			],
-			"ports": [
-				"6767:6767/tcp"
-			],
-			"volumes": [
-				{
-					"container": "/config",
-					"bind": "/volume1/docker/bazarr/config"
-				},
-				{
-					"container": "/movies",
-					"bind": "/volume1/docker/bazarr/movies"
-				},
-				{
-					"container": "/tv",
-					"bind": "/volume1/docker/bazarr/tv"
-				}
-			],
-			"restart_policy": "unless-stopped"
-		},
-		{
-			"type": 1,
-			"title": "Beets",
-			"name": "Beets",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/beets/config<br>mkdir -p /volume1/docker/beets/music<br>mkdir -p /volume1/docker/beets/downloads</p>",
-			"description": "Beets is a music library manager and not, for the most part, a music player. It does include a simple player plugin and an experimental Web-based player, but it generally leaves actual sound-reproduction to specialized tools.",
-			"platform": "linux",
-			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/beets-icon.png",
-			"image": "linuxserver/beets:latest",
-			"env": [
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "1024",
-					"description": "for GroupID"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "100",
-					"description": "for UserID"
-				},
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Amsterdam",
-					"description": "Specify a timezone to use for example Europe/Amsterdam"
-				}
-			],
-			"ports": [
-				"8337:8337/tcp"
-			],
-			"volumes": [
-				{
-					"container": "/config",
-					"bind": "/volume1/docker/beets/config"
-				},
-				{
-					"container": "/music",
-					"bind": "/volume1/docker/beets/music"
-				},
-				{
-					"container": "/downloads",
-					"bind": "/volume1/docker/beets/downloads"
-				}
-			],
-			"restart_policy": "unless-stopped"
-		},
-		{
-			"type": 1,
 			"title": "Boinc",
 			"name": "Boinc",
 			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/boinc/config</p>",
@@ -5212,64 +5085,6 @@
 				{
 					"container": "/config",
 					"bind": "/volume1/docker/boinc/config"
-				}
-			],
-			"restart_policy": "unless-stopped"
-		},
-		{
-			"type": 1,
-			"title": "Booksonic",
-			"name": "Booksonic",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/booksonic/config<br>mkdir -p /volume1/docker/booksonic/audiobooks<br>mkdir -p /volume1/docker/booksonic/podcasts<br>mkdir -p /volume1/docker/booksonic/othermedia</p>",
-			"description": "Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic.",
-			"platform": "linux",
-			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/booksonic.png",
-			"image": "linuxserver/booksonic:latest",
-			"env": [
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "1024",
-					"description": "for GroupID"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "100",
-					"description": "for UserID"
-				},
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Amsterdam",
-					"description": "Specify a timezone to use for example Europe/Amsterdam"
-				},
-				{
-					"name": "CONTEXT_PATH",
-					"label": "CONTEXT_PATH",
-					"default": "url-base",
-					"description": "Base url for use with reverse proxies etc."
-				}
-			],
-			"ports": [
-				"4040:4040/tcp"
-			],
-			"volumes": [
-				{
-					"container": "/config",
-					"bind": "/volume1/docker/booksonic/config"
-				},
-				{
-					"container": "/audiobooks",
-					"bind": "/volume1/docker/booksonic/audiobooks"
-				},
-				{
-					"container": "/podcasts",
-					"bind": "/volume1/docker/booksonic/podcasts"
-				},
-				{
-					"container": "/othermedia",
-					"bind": "/volume1/docker/booksonic/othermedia"
 				}
 			],
 			"restart_policy": "unless-stopped"
@@ -6761,46 +6576,6 @@
 				{
 					"container": "/opt/vc/lib",
 					"bind": "/volume1/docker/emby/opt/vc/lib"
-				}
-			],
-			"restart_policy": "unless-stopped"
-		},
-		{
-			"type": 1,
-			"title": "Embystat",
-			"name": "Embystat",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/embystat/config</p>",
-			"description": "Embystat is a personal web server that can calculate all kinds of statistics from your (local) Emby server. Just install this on your server and let him calculate all kinds of fun stuff.",
-			"platform": "linux",
-			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/embystat-logo.png",
-			"image": "linuxserver/embystat:latest",
-			"env": [
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "1024",
-					"description": "for GroupID"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "100",
-					"description": "for UserID"
-				},
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Amsterdam",
-					"description": "Specify a timezone to use for example Europe/Amsterdam"
-				}
-			],
-			"ports": [
-				"6555:6555/tcp"
-			],
-			"volumes": [
-				{
-					"container": "/config",
-					"bind": "/volume1/docker/embystat/config"
 				}
 			],
 			"restart_policy": "unless-stopped"
